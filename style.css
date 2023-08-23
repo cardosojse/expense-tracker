@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+:root{
+    --clr-gray-700: #0d0d0d;
+    --clr-gray-600: #1a1a1a;
+    --clr-gray-500: #262626;
+    --clr-gray-400: #333333;
+    --clr-gray-300: #808080;
+    --clr-gray-200: #d9d9d9;
+    --clr-gray-100: #f2f2f2;
+    --clr-dark-green: #33B004;
+    --clr-darker-green: #247E03;
+    --clr-light-green: #4ADB2E;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    max-width: 400px;
+    min-width: 300px;
+    height: 100vh;
+    padding: 8px;
+    margin: auto;
+    background-color: var(--clr-gray-200);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr-gray-700);
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+header h1{
+    color: var(--clr-light-green);
+}
+.wallet-container{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.wallet{
+    font-size: 20px;
+    color: var(--clr-gray-100);
+}
+.main-container{
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+    padding: 16px;
+    color: var(--clr-gray-100);
+}
+.input-container{
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+    margin: 12px 0 20px 0;
+}
+.quantity-input{
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--clr-gray-700);
+    padding: 12px;
+}
+.submit-input{
+    width: 20%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--clr-light-green);
+    color: var(--clr-gray-100);
+    font-weight: 700;
+    box-shadow: 2px 3px 2px var(--clr-gray-700);
+}
+.items-list li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 12px;
+    background-color: var(--clr-gray-400);
+    border-radius: 6px;
+}
+.items-list li:hover{
+    padding: 16px;
+}
+.quantity-input:focus{
+    outline: none;
+    border: 1px solid #247E03;
+}
+.submit-input:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 2px black;
+}
