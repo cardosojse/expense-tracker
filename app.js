@@ -8,7 +8,7 @@ submitInput.addEventListener("click", ()=>{
         alert("Empty field");
     }else{
         let li = document.createElement("li");
-        li.textContent = qntInput.value;
+        li.textContent = `R$${qntInput.value}`;
         myList.appendChild(li);
     }
 });
