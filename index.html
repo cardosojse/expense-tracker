@@ -8,21 +8,54 @@
 </head>
 <body>
     <header>
-        <h1>Wallet</h1>
-        <p>R$</p>
-        <div class="my-budget">200,00</div>
+        <img class="sidebar-toggle" src="images/sidebar-icon.png" alt="sidebar icon">
+        <p>Wallet</p>
+        <div class="demo">
+            <p>R$</p>
+            <div class="my-budget">200,00</div>
+        </div>
     </header>
-    <main class="container">
-        <div class="money-spent">45,00</div>
-        <div class="spent-on">Food</div>
+    <main>
+        <div class="date-container">
+            <span>Today</span>
+            <span>Month</span>
+        </div>
+        <div class="content">
+            <div>
+                <span class="current-date">05 Sep 2023</span>
+                <span class="total-spent">570</span>
+            </div>
+            <ul class="expense-list">
+                <li>
+                    <span class="spent-on">Food & Drink</span>
+                    <span class="money-spent">35,00</span>
+                </li>
+                <li>
+                    <span class="spent-on">Eletricity</span>
+                    <span class="money-spent">100,00</span>
+                </li>
+                <li>
+                    <span class="spent-on">Internet</span>
+                    <span class="money-spent">130,00</span>
+                </li>
+                <li>
+                    <span class="spent-on">Shopping</span>
+                    <span class="money-spent">265,00</span>
+                </li>
+                <li>
+                    <span class="spent-on">Pet Food</span>
+                    <span class="money-spent">40,00</span>
+                </li>
+            </ul>
+        </div>
     </main>
-    <aside class="sidebar">
+    <!-- <aside class="sidebar">
         <ul>
             <li class="transaction-value">25,00</li>
             <li class="transaction-type">Drink</li>
             <li class="transaction-date">25/02/2023</li>
         </ul>
-    </aside>
+    </aside> -->
     <script src="app.js"></script>
 </body>
 </html>
