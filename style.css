@@ -14,6 +14,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
+    position: fixed;
     background-color: var(--clr-green);
     width: 100%;
     height: 100%;
@@ -43,8 +44,9 @@ main{
     padding: 30px;
 }
 .date-container{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     background-color: var(--clr-gray-100);
     border-radius: 32px;
 }
@@ -91,8 +93,6 @@ main{
     padding: 8px;
     margin: 6px 0 0;
     font-size: 14px;
-    background-color: var(--clr-gray-100);
-    border-radius: 8px;
 }
 .money-spent{
     color: var(--clr-orange);
@@ -100,6 +100,21 @@ main{
 .expense-list li:hover{
     padding: 12px;
     transition: 500ms;
+    cursor: pointer;
 }
+/* 
+[17:31, 05/09/2023] squids: é um after com hover
+[17:32, 05/09/2023] squids: criei uma linha q comeca com 0px
+[17:32, 05/09/2023] squids: ai qnd passa o mouse ela fica com 2px 
+*/
 
 /* SIDEBAR */
+.sidebar{
+    position: fixed;
+    top: 3%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-white);
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+}
