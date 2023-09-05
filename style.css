@@ -103,9 +103,24 @@ main{
     cursor: pointer;
 }
 /* 
-[17:31, 05/09/2023] squids: é um after com hover
-[17:32, 05/09/2023] squids: criei uma linha q comeca com 0px
-[17:32, 05/09/2023] squids: ai qnd passa o mouse ela fica com 2px 
+.item a {
+    display: inline-block;
+    position: relative;
+    color: black;
+  }  
+.item a:after {
+    content: " ";
+    background-color: blue;
+    display: block;
+    height: 2px;
+    width: 0px;
+    border-radius: 3px;
+    transition: 0.4s;
+    position: absolute;
+
+.item a:hover:after{
+    width: 100%;
+  }
 */
 
 /* SIDEBAR */
