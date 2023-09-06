@@ -2,7 +2,7 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 const closeBtn = document.querySelector(".close-btn");
 const sidebar = document.querySelector(".sidebar");
 
-toggleBtn.addEventListener("click", function() {
+toggleBtn.addEventListener("click", () => {
     if (sidebar.classList.contains("show-sidebar")){
         sidebar.classList.remove("show-sidebar");
     }else{
@@ -10,6 +10,6 @@ toggleBtn.addEventListener("click", function() {
     }
 });
 
-closeBtn.addEventListener("click", function() {
+closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 });
