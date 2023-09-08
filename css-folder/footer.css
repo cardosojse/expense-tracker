@@ -1,0 +1,19 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--clr-blue);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+}
+footer a{
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+}
+footer img{
+    width: 35px;
+    height: 35px;
+}

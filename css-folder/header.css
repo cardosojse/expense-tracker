@@ -1,0 +1,17 @@
+header{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    padding: 30px;
+}
+header > p{
+    font-size: 18px;
+    padding: 20px 0 4px;
+}
+header .demo{
+    display: flex;
+    font-size: 32px;
+    font-weight: 700;
+    gap: 2px;
+}
