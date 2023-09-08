@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="header">
             <img class="sidebar-toggle" src="images/sidebar-icon.png" alt="sidebar icon">
             <p>Wallet</p>
             <div class="demo">
                 <p>R$</p>
-                <div class="my-budget">200,00</div>
+                <div class="my-budget">3200,00</div>
             </div>
         </header>
         <main class="main-container">
@@ -28,44 +28,69 @@
                 </div>
                 <ul class="expense-list">
                     <li>
+                        <img src="images/options-img/food.png" alt="food-icon">
                         <span class="spent-on">Food & Drink</span>
                         <span class="money-spent">35,00</span>
                     </li>
                     <li>
+                        <img src="images/options-img/eletricity.png" alt="eletricity-icon">
                         <span class="spent-on">Eletricity</span>
                         <span class="money-spent">100,00</span>
                     </li>
                     <li>
+                        <img src="images/options-img/internet.png" alt="internet-icon">
                         <span class="spent-on">Internet</span>
                         <span class="money-spent">130,00</span>
                     </li>
                     <li>
+                        <img src="images/options-img/shop.png" alt="shopping-icon">
                         <span class="spent-on">Shopping</span>
                         <span class="money-spent">265,00</span>
                     </li>
                     <li>
+                        <img src="images/options-img/pet.png" alt="pet-icon">
                         <span class="spent-on">Pet Food</span>
                         <span class="money-spent">40,00</span>
                     </li>
+                    
                 </ul>
             </div>
         </main>
-        <!-- <div class="bottom-bar"></div> -->
         <aside class="sidebar">
             <img src="images/close-button.png" alt="close button" class="close-btn">
             <span>Add Transaction</span>
+            <div class="transaction-value-container">
+                <span>R$</span>
+                <input type="number" id="transaction-value" placeholder="500,00">
+            </div>
             <div class="input-container">
-                <input type="number" class="transaction-value" placeholder="R$500,00">
-                <input type="text" class="transaction-type" placeholder="Where I spent?">
-                <input type="date" class="transaction-date">
+                <img src="images/options-img/what.png" alt="options-icon">
+                <select id="transaction-type" required size="1">
+                    <option value="Card">Card</option>
+                    <option value="Eletricity">Eletricity</option>
+                    <option value="Food & Drink">Food & Drink</option>
+                    <option value="House">House</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Pet Food">Pet</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Trip">Travel</option>
+                    <option value="Other">Other</option>
+                </select>
+                <img src="images/options-img/calendar.png" alt="calendar-icon">
+                <input type="date" id="transaction-date">
             </div>
         </aside>
-        <!-- <footer>
-            <a target="_blank" href="https://icons8.com/icon/3095/card%C3%A1pio">Cardápio</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-            <a target="_blank" href="https://icons8.com/icon/83981/excluir">Excluir</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-            <a target="_blank" href="https://icons8.com/icon/84997/calend%C3%A1rio">Calendário</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-            <a target="_blank" href="https://icons8.com/icon/dtvMlkUgj119/money-bill">Money Bill</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </footer> -->
+        <footer>
+            <a href="#">
+                <img src="images/carteira.png" alt="waller-icon">
+            </a>
+            <a href="#">
+                <img src="images/notificação.png" alt="notification-icon">
+            </a>
+            <a href="#">
+                <img src="images/icons8-mais-50.png" alt="more-icon">
+            </a>         
+        </footer>
         <script src="app.js"></script>
     </div>
 </body>
