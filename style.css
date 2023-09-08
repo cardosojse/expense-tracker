@@ -24,9 +24,6 @@
     body{
         background-color: var(--clr-gray-200);
     }
-    .header{
-        padding: 60px 30px;
-    }
     .container, .sidebar{
         position: relative;
         max-width: 500px;
@@ -60,7 +57,7 @@ header{
     grid-template-rows: auto auto auto;
     background-color: var(--clr-green);
     color: var(--clr-white);
-    padding: 35px 30px 60px;
+    padding: 30px;
 }
 header > p{
     font-size: 18px;
@@ -73,14 +70,11 @@ header .demo{
     gap: 2px;
 }
 .container{
-    background-color: #fff;
+    background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
     height: 100vh;
-    position: relative;
 }
 .main-container{
     max-width: 500px;
-    position: absolute;
-    top: 20%;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     background-color: var(--clr-white);
@@ -133,7 +127,6 @@ header .demo{
 .expense-list{
     list-style: none;
     font-weight: bold;
-    height: 100%;
     overflow: scroll;
 }
 .expense-list img{
@@ -247,6 +240,60 @@ header .demo{
 }
 #transaction-value:focus{
     outline: none;
+}
+.number-pad{
+    display: grid;
+    grid-template-areas: 
+        "a1 a2 a3 a4"
+        "a5 a6 a7 a8"
+        "a9 a10 a11 a8"
+        "a12 a12 a13 a8";
+    justify-items: center;
+}
+.grid-item{
+    padding: 4px;
+    border: 1px solid var(--clr-gray-200);
+}
+.a1{
+    grid-area:a1;
+} 
+.a2{
+    grid-area:a2;
+} 
+.a3{
+    grid-area:a3;
+}
+.a4{
+    grid-area:a4;
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+}
+.a5{
+    grid-area:a5;
+}
+.a6{
+    grid-area:a6;
+}
+.a7{
+    grid-area:a7;
+}
+.a8{
+    grid-area:a8;
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    font-size: 60px;
+}
+.a9{
+    grid-area:a9;
+}
+.a10{
+    grid-area:a10;
+}
+.a11{
+    grid-area:a11;
+}
+.a12{
+    grid-area:a12;
 }
 /* ::-webkit-calendar-picker-indicator{
 } */
