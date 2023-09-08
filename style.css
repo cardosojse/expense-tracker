@@ -152,7 +152,7 @@ header .demo{
 /* SIDEBAR */
 .sidebar{
     position: fixed;
-    top: 3.5%;
+    top: 4.5%;
     width: 100%;
     max-width: 500px;
     height: calc(100% - 20px);
