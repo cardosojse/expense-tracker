@@ -36,7 +36,7 @@
     }
     aside .close-btn{
         position: fixed;
-        top: 5%;
+        top: 3.1%;
     }
     .date-container{
         width: calc(100% - 100px);
@@ -64,14 +64,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    overflow: auto;
+    height: 100vh;
 }
 .container{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
-    position: relative;
+    height: 100%;
+    overflow: auto;
 }
 ::-webkit-scrollbar{
-    width: 8px;
+    width: 0;
 }
 ::-webkit-scrollbar-track{
     background: transparent;

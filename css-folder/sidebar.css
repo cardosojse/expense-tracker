@@ -2,16 +2,17 @@
     position: fixed;
     top: 5%;
     width: 100%;
+    height: 644px;
     max-width: 500px;
     background-color: var(--clr-white);
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     padding: 20px 0;
-    transform: translateY(200%);
+    transform: translateY(150%);
     transition: 1.2s;
 }
 .show-sidebar{
-    transform: translateY(35%);
+    transform: translateY(20%);
     transition: 1.2s;
 }
 .sidebar-toggle{
@@ -27,7 +28,6 @@
 }
 .close-btn{
     position: fixed;
-    top: 2.3%;
     left: 5%;
     cursor: pointer;
     animation: rotate 2s ease infinite;
