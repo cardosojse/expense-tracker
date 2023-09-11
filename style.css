@@ -4,6 +4,7 @@
 @import url(css-folder/main-container.css);
 @import url(css-folder/sidebar.css);
 @import url(css-folder/footer.css);
+@import url(css-folder/add-money.css);
 
 @keyframes bounce {
     0%{
@@ -36,7 +37,7 @@
     }
     aside .close-btn{
         position: fixed;
-        top: 3.1%;
+        top: 2%;
     }
     .date-container{
         width: calc(100% - 100px);
@@ -44,8 +45,7 @@
     .number-pad{
         position: absolute;
         left: 0;
-        bottom: 3.2%;
-        transform: translateY(-100%);
+        bottom: -7.4%;
         width: 100%;
     }
 }
@@ -63,12 +63,10 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-body{
-    height: 100vh;
-}
 .container{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
-    height: 100%;
+    height: 100vh;
+    max-height: 930px;
     overflow: auto;
 }
 ::-webkit-scrollbar{

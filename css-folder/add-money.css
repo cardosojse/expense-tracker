@@ -1,0 +1,77 @@
+.add-money-bar{
+    position: fixed;
+    top: 5%;
+    width: 100%;
+    height: 644px;
+    max-width: 500px;
+    background-color: var(--clr-white);
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    padding: 20px 0;
+    transform: translateY(150%);
+    transition: 1.2s;
+}
+.show-money-bar{
+    transform: translateY(20%);
+    transition: 1.2s;
+}
+.close-mbar-btn{
+    position: fixed;
+    top: 2.7%;
+    left: 5%;
+    cursor: pointer;
+    animation: rotate 2s ease infinite;
+    padding: 2px;
+}
+.close-mbar-btn:hover{
+    background-color: var(--clr-gray-100);
+    border-radius: 50%;
+}
+.add-money-bar span{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--clr-blue);
+}
+.add-money-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 40px;
+    row-gap: 8px;
+}
+.add-money-container span{
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    width: calc(20% - 6px);
+    padding: 12px;
+    border-radius: 36px;
+    margin-right: 6px;
+}
+#add-money-input{
+    padding: 12px 0;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid var(--clr-blue);
+    color: var(--clr-blue);
+    font-size: 24px;
+    font-weight: 700;
+}
+#add-money-input:focus{
+    outline: none;
+}
+#add-money-submit{
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+#add-money-submit:hover{
+    background-color: rgba(0, 25, 45, 0.8);
+    cursor: pointer;
+}

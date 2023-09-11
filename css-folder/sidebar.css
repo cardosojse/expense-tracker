@@ -28,9 +28,15 @@
 }
 .close-btn{
     position: fixed;
+    top: 2.7%;
     left: 5%;
     cursor: pointer;
     animation: rotate 2s ease infinite;
+    padding: 2px;
+}
+.close-btn:hover{
+    background-color: var(--clr-gray-100);
+    border-radius: 50%;
 }
 .transaction-value-container{
     display: flex;
@@ -57,11 +63,11 @@
 /* INPUT CONTAINER */
 .input-container{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 82%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
     row-gap: 12px;
-    margin: 0 40px;
+    margin: 0px 40px;
 }
 .input-container input, select{
     padding: 12px 0;
@@ -88,7 +94,27 @@
 #transaction-value:focus{
     outline: none;
 }
+
+#submit-input{
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+#submit-input:hover{
+    background-color: rgba(0, 25, 45, 0.8);
+    cursor: pointer;
+}
+::-webkit-calendar-picker-indicator{
+    color: #00192d;
+}
+/* NUMBER-PAD 
 .number-pad{
+    position: absolute;
+    bottom: -2.3%;
+    width: 100%;
     display: grid;
     grid-template-areas: 
         "a1 a2 a3 a4"
@@ -106,6 +132,11 @@
     font-size: 18px;
     color: var(--clr-green);
     height: 60px;
+    cursor: pointer;
+}
+.grid-item:hover{
+    background-color: var(--clr-green);
+    color: var(--clr-gray-100);
 }
 .a1{
     grid-area:a1;
@@ -119,8 +150,8 @@
 }
 .a4{
     grid-area:a4;
-    background-color: var(--clr-gray-100);
-    color: var(--clr-blue);
+    background-color: var(--clr-green);
+    color: var(--clr-gray-100);
     border-right: none;
 }
 .a5{
@@ -142,6 +173,11 @@
     border-right: none;
     border-bottom: none;
 }
+.a4:hover,
+.a8:hover{
+    background-color: var(--clr-gray-100);
+    color: var(--clr-green);
+}
 .a9{
     grid-area:a9;
     border-left: none;
@@ -161,6 +197,5 @@
     grid-area: a13;
     border-bottom: none;
 }
-::-webkit-calendar-picker-indicator{
-    color: #00192d;
-}
+
+*/
