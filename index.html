@@ -12,7 +12,6 @@
             <img class="sidebar-toggle" src="images/sidebar-icon.png" alt="sidebar icon">
             <p>Wallet</p>
             <div class="demo">
-                <p>R$</p>
                 <div class="my-budget">0</div>
             </div>
         </header>
@@ -24,14 +23,9 @@
             <div class="content">
                 <div>
                     <span class="current-date">05 Sep 2023</span>
-                    <span class="total-spent">570</span>
+                    <span class="total-spent">0</span>
                 </div>
                 <ul class="expense-list">
-                    <li>
-                        <img src="images/options-img/food.png" alt="food-icon">
-                        <span class="spent-on">Food & Drink</span>
-                        <span class="money-spent">35,00</span>
-                    </li>
                     <!-- <li>
                         <img src="images/options-img/eletricity.png" alt="eletricity-icon">
                         <span class="spent-on">Eletricity</span>
@@ -64,7 +58,7 @@
             </div>
             <div class="input-container">
                 <img src="images/options-img/what.png" alt="options-icon">
-                <select id="transaction-type" required size="1">
+                <select id="transaction-category" required size="1">
                     <option value="Card">Card</option>
                     <option value="Eletricity">Eletricity</option>
                     <option value="Food & Drink">Food & Drink</option>
@@ -80,7 +74,7 @@
                 <img src="images/options-img/notes.png" alt="notes-icon">
                 <input type="text" id="transaction-notes" placeholder="Notes">
             </div>
-            <input type="submit" id="submit-input">
+            <input type="submit" id="submit-input" value="Send">
             <!-- <div class="number-pad">
                 <div class="grid-item a1">1</div>
                 <div class="grid-item a2">2</div>
@@ -99,10 +93,10 @@
         </aside>
         <div class="add-money-bar">
             <img src="images/close-moneybar-btn.png" alt="close button" class="close-mbar-btn">
-            <span>Add Transaction</span>
+            <span>Add Money to Wallet</span>
             <div class="add-money-container">
                 <span>R$</span>
-                <input type="number" id="add-money-input" placeholder="Add to wallet">
+                <input type="number" id="add-money-input" placeholder="500,00">
                 <input type="submit" id="add-money-submit" value="Send">
             </div>
         </div>
@@ -113,7 +107,7 @@
             <a href="#">
                 <img src="images/notificação.png" alt="notification-icon">
             </a>
-            <a href="#" class="add-money-btn">
+            <a href="#" class="more-icon">
                 <img src="images/icons8-mais-50.png" alt="more-icon">
             </a>         
         </div>
