@@ -27,10 +27,11 @@
 }
 
 @media screen and (min-width: 465px) {
-    body{
-        background-color: var(--clr-gray-200);
+    .header{
+        width: 100vw;
     }
     .container, .sidebar{
+        width: 100%;
         max-width: 500px;
         margin: auto;
         background-color: var(--clr-white);
@@ -41,12 +42,6 @@
     }
     .date-container{
         width: calc(100% - 100px);
-    }
-    .number-pad{
-        position: absolute;
-        left: 0;
-        bottom: -7.4%;
-        width: 100%;
     }
 }
 :root{
@@ -63,10 +58,16 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+body{
+    background-color: var(--clr-gray-200);
+    width: 100vw;
+    height: 100vh;
+    margin: 0rem;
+    overflow: hidden;
+}
 .container{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
-    height: 100vh;
-    max-height: 930px;
+    height: 100%;
     overflow: auto;
 }
 ::-webkit-scrollbar{

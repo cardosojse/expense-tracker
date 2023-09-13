@@ -39,22 +39,22 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 30px 40px;
-    row-gap: 8px;
+    margin: 80px 60px 0;
+    row-gap: 12px;
 }
 .add-money-container span{
     background-color: var(--clr-green);
     color: var(--clr-white);
-    width: calc(20% - 6px);
+    width: calc(25% - 6px);
     padding: 12px;
     border-radius: 36px;
     margin-right: 6px;
 }
 #add-money-input{
     padding: 12px 0;
-    width: 80%;
+    width: 75%;
     border: none;
-    border-bottom: 1px solid var(--clr-blue);
+    border-bottom: 1px solid var(--clr-gray-200);
     color: var(--clr-blue);
     font-size: 24px;
     font-weight: 700;

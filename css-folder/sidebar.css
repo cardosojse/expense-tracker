@@ -41,8 +41,7 @@
 .transaction-value-container{
     display: flex;
     align-items: center;
-    margin-top: 60px;
-    margin: 20px 40px;
+    margin: 60px 40px 20px;
 }
 .transaction-value-container span{
     background-color: var(--clr-green);
@@ -94,14 +93,18 @@
 #transaction-value:focus{
     outline: none;
 }
-
 #submit-input{
+    position: relative;
+    top: 7.5%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--clr-blue);
     color: var(--clr-white);
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
     font-size: 16px;
+
 }
 #submit-input:hover{
     background-color: rgba(0, 25, 45, 0.8);
