@@ -37,8 +37,10 @@ moneySubmit.addEventListener("click", () => {
     if (moneyInput.value === ''){
         alert('Field is empty!');
     }else{
-        wallet.textContent = new Intl.NumberFormat('pt-BR', { style: 'currency', 
-            currency: 'BRL' }).format(moneyInput.value);
+        let num = Number(moneyInput.value);
+        wallet.textContent = num;
+        // wallet.textContent = new Intl.NumberFormat('pt-BR', { style: 'currency', 
+        //     currency: 'BRL' }).format(num);
     }
     moneyInput.value = '';
     moneybox.classList.remove("show-money-bar");
@@ -64,10 +66,12 @@ const todayDate = document.querySelector(".current-date");
 const expenseList = document.querySelector(".expense-list");
 
 addBtn.addEventListener("click", () => {
+    let walletAmount = parseFloat(wallet.textContent);
     let amount = Number(amountInput.value);
     let category = categorySelect.value;
     // let date = dateInput.value;
     // let notes = noteInput.value;
+
     if (category === ''){
         alert('Select a category!');
         return;
@@ -80,15 +84,19 @@ addBtn.addEventListener("click", () => {
     //     alert('Select a date!');
     //     return;
     // }
+
     amountInput.value = '';
     sidebar.classList.remove("show-sidebar");
 
     totalAmount += amount;
+    walletAmount -= amount;
+    
     newExpense(category, amount);
 
     totalSpent.textContent = new Intl.NumberFormat('pt-BR', 
         { style: 'currency', currency: 'BRL' }).format(totalAmount);
-
+    wallet.textContent = new Intl.NumberFormat('pt-BR', 
+    { style: 'currency', currency: 'BRL' }).format(walletAmount);
 });
 
 let newExpense = (ctg, amt) => {
