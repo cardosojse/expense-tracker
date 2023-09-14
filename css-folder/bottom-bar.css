@@ -1,8 +1,9 @@
 .bottom-bar{
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    background-color: var(--clr-blue);
     width: 100%;
+    max-width: 450px;
+    background-color: var(--clr-blue);
     display: flex;
     justify-content: space-around;
     padding: 14px 0;

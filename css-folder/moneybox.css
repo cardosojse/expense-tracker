@@ -1,4 +1,4 @@
-.add-money-bar{
+.moneybox{
     position: fixed;
     top: calc(0% + 169px);
     width: 100%;
@@ -13,7 +13,7 @@
     transform: translateY(0);
     transition: 1.5s;
 }
-.close-mbar-btn{
+.close-moneybox{
     position: fixed;
     top: 2%;
     left: 5%;
@@ -21,18 +21,18 @@
     animation: rotate 2s ease infinite;
     padding: 2px;
 }
-.close-mbar-btn:hover{
+.close-moneybox:hover{
     background-color: var(--clr-gray-100);
     border-radius: 50%;
 }
-.add-money-bar span{
+.moneybox span{
     display: flex;
     justify-content: center;
     font-weight: 700;
     font-size: 18px;
     color: var(--clr-blue);
 }
-.add-money-container{
+.add-money-box{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -40,7 +40,7 @@
     margin: 80px 60px 0;
     row-gap: 12px;
 }
-.add-money-container span{
+.add-money-box span{
     background-color: var(--clr-green);
     color: var(--clr-white);
     width: calc(25% - 6px);
@@ -48,7 +48,7 @@
     border-radius: 36px;
     margin-right: 6px;
 }
-#add-money-input{
+#moneybox-input{
     padding: 12px 0;
     width: 75%;
     border: none;
@@ -57,10 +57,10 @@
     font-size: 24px;
     font-weight: 700;
 }
-#add-money-input:focus{
+#moneybox-input:focus{
     outline: none;
 }
-#add-money-submit{
+#moneybox-submit{
     background-color: var(--clr-blue);
     color: var(--clr-white);
     border: none;
@@ -69,7 +69,7 @@
     margin-top: 20px;
     font-size: 16px;
 }
-#add-money-submit:hover{
+#moneybox-submit:hover{
     background-color: rgba(0, 25, 45, 0.8);
     cursor: pointer;
 }

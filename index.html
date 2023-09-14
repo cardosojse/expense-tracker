@@ -54,7 +54,7 @@
             <span>Add Transaction</span>
             <div class="transaction-value-container">
                 <span>R$</span>
-                <input type="number" id="transaction-value" placeholder="500,00">
+                <input type="number" id="transaction-value" placeholder="0,00">
             </div>
             <div class="input-container">
                 <img src="images/options-img/what.png" alt="options-icon">
@@ -75,44 +75,28 @@
                 <input type="text" id="transaction-notes" placeholder="Notes">
             </div>
             <input type="submit" id="submit-input" value="Send">
-            <!-- <div class="number-pad">
-                <div class="grid-item a1">1</div>
-                <div class="grid-item a2">2</div>
-                <div class="grid-item a3">3</div>
-                <div class="grid-item a4">&#10006;</div>
-                <div class="grid-item a5">4</div>
-                <div class="grid-item a6">5</div>
-                <div class="grid-item a7">6</div>
-                <div class="grid-item a8">&crarr;</div>
-                <div class="grid-item a9">7</div>
-                <div class="grid-item a10">8</div>
-                <div class="grid-item a11">9</div>
-                <div class="grid-item a12">0</div>
-                <div class="grid-item a13">,</div>
-            </div> -->
         </aside>
-        <div class="add-money-bar">
-            <img src="images/close-moneybar-btn.png" alt="close button" class="close-mbar-btn">
-            <span>Add Transaction</span>
-            <div class="add-money-container">
+        <div class="moneybox">
+            <img src="images/close-moneybar-btn.png" alt="close button" class="close-moneybox">
+            <span>Add money to wallet</span>
+            <div class="add-money-box">
                 <span>R$</span>
-                <input type="number" id="add-money-input" placeholder="500,00">
-                <input type="submit" id="add-money-submit" value="Send">
+                <input type="number" id="moneybox-input" placeholder="0,00">
+                <input type="submit" id="moneybox-submit" value="Send">
             </div>
         </div>
         <div class="bottom-bar">
-            <a href="#">
-                <img src="images/carteira.png" alt="waller-icon">
+            <a href="#" class="wallet-icon">
+                <img src="images/carteira.png" alt="wallet-icon">
             </a>
             <a href="#">
                 <img src="images/notificação.png" alt="notification-icon">
             </a>
-            <a href="#" class="more-icon">
+            <a href="#" >
                 <img src="images/icons8-mais-50.png" alt="more-icon">
             </a>         
         </div>
-        <script src="app.js"></script>
-        <script src="script.js"></script>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

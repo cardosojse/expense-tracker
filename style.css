@@ -4,7 +4,7 @@
 @import url(css-folder/main-container.css);
 @import url(css-folder/sidebar.css);
 @import url(css-folder/bottom-bar.css);
-@import url(css-folder/add-money.css);
+@import url(css-folder/moneybox.css);
 
 @keyframes bounce {
     0%{
@@ -64,6 +64,7 @@ body{
 }
 .container{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
+    max-width: 450px;
     height: 100%;
 }
 ::-webkit-scrollbar{

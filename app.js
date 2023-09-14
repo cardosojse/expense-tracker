@@ -2,11 +2,11 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 const closeBtn = document.querySelector(".close-btn");
 const sidebar = document.querySelector(".sidebar");
 const wallet = document.querySelector(".my-budget");
-const moreIcon = document.querySelector(".more-icon");
-const moneyInput = document.querySelector("#add-money-input");
-const addMoneyBtn = document.querySelector("#add-money-submit");
-const closeMBarBtn = document.querySelector(".close-mbar-btn");
-const moneybar = document.querySelector(".add-money-bar");
+const walletIcon = document.querySelector(".wallet-icon");
+const moneybox = document.querySelector(".moneybox");
+const closeMoneybox = document.querySelector(".close-moneybox");
+const moneyInput = document.querySelector("#moneybox-input");
+const moneySubmit = document.querySelector("#moneybox-submit");
 
 // display sidebar
 toggleBtn.addEventListener("click", () => {
@@ -16,36 +16,34 @@ toggleBtn.addEventListener("click", () => {
         sidebar.classList.add("show-sidebar");
     }
 });
-
 closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 });
 
-// display "add-money" bar
-moreIcon.addEventListener("click", () => {
-    if (moneybar.classList.contains("show-money-bar")){
-        moneybar.classList.remove("show-money-bar")
+// display moneybox
+walletIcon.addEventListener("click", () => {
+    if (moneybox.classList.contains("show-money-bar")){
+        moneybox.classList.remove("show-money-bar")
     }else{
-        moneybar.classList.add("show-money-bar")
+        moneybox.classList.add("show-money-bar")
     }
 });
-
-closeMBarBtn.addEventListener("click", () => {
-    moneybar.classList.remove("show-money-bar");
+closeMoneybox.addEventListener("click", () => {
+    moneybox.classList.remove("show-money-bar");
 });
 
 // add money to wallet
-addMoneyBtn.addEventListener("click", () => {
+moneySubmit.addEventListener("click", () => {
     if (moneyInput.value === ''){
-        alert('Field is empty!')
+        alert('Field is empty!');
     }else{
-        let num = moneyInput.value;
         wallet.textContent = new Intl.NumberFormat('pt-BR', { style: 'currency', 
-            currency: 'BRL' }).format(num);
+            currency: 'BRL' }).format(moneyInput.value);
     }
+    moneyInput.value = '';
+    moneybox.classList.remove("show-money-bar");
     saveData();
 })
-
 let saveData = () => {
     localStorage.setItem("data", wallet.textContent);
 }
@@ -53,3 +51,50 @@ let getData = () => {
     wallet.textContent = localStorage.getItem("data");
 }
 getData();
+
+//
+let totalAmount = 0;
+const amountInput = document.querySelector("#transaction-value");
+const categorySelect = document.querySelector("#transaction-category");
+const dateInput = document.querySelector("#transaction-date");
+const noteInput = document.querySelector("#transaction-notes");
+const addBtn = document.querySelector("#submit-input");
+const totalSpent = document.querySelector(".total-spent");
+const todayDate = document.querySelector(".current-date");
+const expenseList = document.querySelector(".expense-list");
+
+addBtn.addEventListener("click", () => {
+    let amount = Number(amountInput.value);
+    let category = categorySelect.value;
+    // let date = dateInput.value;
+    // let notes = noteInput.value;
+    if (category === ''){
+        alert('Select a category!');
+        return;
+    }
+    if (isNaN(amount) || amount <= 0){
+        alert('Enter a valid amount!');
+        return;
+    }
+    // if (date === ''){
+    //     alert('Select a date!');
+    //     return;
+    // }
+    amountInput.value = '';
+    sidebar.classList.remove("show-sidebar");
+
+    totalAmount += amount;
+    newExpense(category, amount);
+
+    totalSpent.textContent = new Intl.NumberFormat('pt-BR', 
+        { style: 'currency', currency: 'BRL' }).format(totalAmount);
+
+});
+
+let newExpense = (ctg, amt) => {
+    let li = document.createElement("li");
+    li.innerHTML += `<img src="">
+                    <span class="spent-on">${ctg}</span>
+                    <span class="money-spent">${amt}</span>`;
+    expenseList.appendChild(li);
+}
