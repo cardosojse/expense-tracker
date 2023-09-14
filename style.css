@@ -3,7 +3,7 @@
 @import url(css-folder/header.css);
 @import url(css-folder/main-container.css);
 @import url(css-folder/sidebar.css);
-@import url(css-folder/footer.css);
+@import url(css-folder/bottom-bar.css);
 @import url(css-folder/add-money.css);
 
 @keyframes bounce {
@@ -26,7 +26,7 @@
     }
 }
 
-@media screen and (min-width: 465px) {
+/* @media screen and (width >= 465px) {
     .container, .sidebar{
         width: 100%;
         max-width: 500px;
@@ -40,7 +40,7 @@
     .date-container{
         width: calc(100% - 100px);
     }
-}
+} */
 :root{
     --clr-blue:#00192d;
     --clr-green:#21ce99;
@@ -63,9 +63,8 @@ body{
     overflow: hidden;
 }
 .container{
-    /* background: linear-gradient(to bottom, #21ce99 50%, #fff 50%); */
+    background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
     height: 100%;
-    overflow: auto;
 }
 ::-webkit-scrollbar{
     width: 0;

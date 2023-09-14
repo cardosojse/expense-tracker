@@ -1,15 +1,16 @@
 .main-container{
-    max-width: 500px;
+    height: 100%;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     background-color: var(--clr-white);
     padding: 50px 30px;
+    font-weight: 700;
 }
 .date-container{
     display: flex;
     justify-items: center;
     margin: auto;
-    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
     background-color: var(--clr-gray-100);
     border-radius: 32px;
     cursor: pointer;
@@ -19,7 +20,6 @@
     padding: 12px;
     width: 100%;
     text-align: center;
-    font-weight: 700;
 }
 .date-container span:first-child{
     background-color: var(--clr-blue);
@@ -41,16 +41,13 @@
     font-size: 20px;
 }
 .current-date{
-    font-weight: 700;
     color: var(--clr-blue);
 }
 .total-spent{
-    font-weight: 700;
     color: var(--clr-orange);
 }
 .expense-list{
     list-style: none;
-    font-weight: bold;
 }
 .expense-list img{
     border-radius: 4px;
