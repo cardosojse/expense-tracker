@@ -1,3 +1,37 @@
+let categoryImages = [
+    {
+        option: card,
+        img: images/options-img/card.png,
+    },
+    {
+        option: eletricity,
+        img: images/options-img/eletricity.png,
+    },
+    {
+        option: food,
+        img: images/options-img/food.png,
+    },
+    {
+        option: house,
+        img: images/options-img/house.png,
+    },
+    {
+        option: internet,
+        img: images/options-img/internet.png,
+    },
+    {
+        option: Pet,
+        img: images/options-img/pet.png,
+    },
+    {
+        option: Trip,
+        img: images/options-img/trip.png,
+    },
+    {
+        option: others,
+        img: images/options-img/what.png, 
+    }
+];
 const toggleBtn = document.querySelector(".sidebar-toggle"); 
 const closeBtn = document.querySelector(".close-btn");
 const sidebar = document.querySelector(".sidebar");

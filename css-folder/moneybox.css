@@ -1,7 +1,7 @@
 .moneybox{
     position: fixed;
     top: calc(0% + 169px);
-    width: 100%;
+    width: clamp(375px, 100%, 450px);
     height: 100%;
     background-color: var(--clr-white);
     border-top-left-radius: 28px; border-top-right-radius: 28px;
