@@ -14,5 +14,5 @@ header .demo{
     display: flex;
     font-size: 32px;
     font-weight: 700;
-    gap: 2px;
+    gap: 8px;
 }

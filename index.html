@@ -12,6 +12,7 @@
             <img class="sidebar-toggle" src="images/sidebar-icon.png" alt="sidebar icon">
             <p>Wallet</p>
             <div class="demo">
+                <span>R$</span>
                 <div class="my-budget">0</div>
             </div>
         </header>
@@ -54,20 +55,20 @@
             <span>Add Transaction</span>
             <div class="transaction-value-container">
                 <span>R$</span>
-                <input type="number" id="transaction-value" placeholder="0,00">
+                <input type="number" id="transaction-value" placeholder="0.00" maxlength="6">
             </div>
             <div class="input-container">
-                <img src="images/options-img/options.png" alt="options-icon">
+                <img src="images/options-img/options.png" alt="options-icon" class="option-img">
                 <select id="transaction-category" required size="1">
                     <option value="Card">Card</option>
                     <option value="Eletricity">Eletricity</option>
-                    <option value="Food & Drink">Food & Drink</option>
+                    <option value="Food">Food</option>
                     <option value="House">House</option>
                     <option value="Internet">Internet</option>
-                    <option value="Pet Food">Pet</option>
-                    <option value="Shopping">Pharmacy</option>
+                    <option value="Pet">Pet</option>
+                    <option value="Pharmacy">Pharmacy</option>
                     <option value="Shopping">Shopping</option>
-                    <option value="Trip">Travel</option>
+                    <option value="Travel">Travel</option>
                     <option value="Others" selected>Others</option>
                 </select>
                 <img src="images/options-img/calendar.png" alt="calendar-icon">
@@ -82,7 +83,7 @@
             <span>Add money to wallet</span>
             <div class="add-money-box">
                 <span>R$</span>
-                <input type="number" id="moneybox-input" placeholder="0,00">
+                <input type="number" id="moneybox-input" placeholder="0.00" maxlength="6">
                 <input type="submit" id="moneybox-submit" value="Send">
             </div>
         </div>
