@@ -1,6 +1,6 @@
 .sidebar{
     position: fixed;
-    width: 100%;
+    width: clamp(375px, 100%, 450px);
     height: 100%;
     top: calc(0% + 169px);
     background-color: var(--clr-white);

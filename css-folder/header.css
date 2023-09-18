@@ -4,6 +4,7 @@ header{
     background-color: var(--clr-green);
     color: var(--clr-white);
     padding: 30px;
+    width: clamp(375px, 100%, 450px);
 }
 header > p{
     font-size: 18px;

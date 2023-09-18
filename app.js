@@ -37,20 +37,21 @@ moneySubmit.addEventListener("click", () => {
     if (moneyInput.value === ''){
         alert('Field is empty!');
     }else{
-        let num = Number(moneyInput.value);
-        wallet.textContent = num;
-        // wallet.textContent = new Intl.NumberFormat('pt-BR', { style: 'currency', 
-        //     currency: 'BRL' }).format(num);
+        let num = moneyInput.value;
+        // wallet.innerText = num;
+        wallet.textContent = new Intl.NumberFormat('pt-BR', { style: 'currency', 
+            currency: 'BRL' }).format(num);
     }
     moneyInput.value = '';
     moneybox.classList.remove("show-money-bar");
     saveData();
+    console.log(wallet.innerText);
 })
 let saveData = () => {
-    localStorage.setItem("data", wallet.textContent);
+    localStorage.setItem("data", wallet.innerText);
 }
 let getData = () => {
-    wallet.textContent = localStorage.getItem("data");
+    wallet.innerText = localStorage.getItem("data");
 }
 getData();
 
@@ -66,7 +67,8 @@ const todayDate = document.querySelector(".current-date");
 const expenseList = document.querySelector(".expense-list");
 
 addBtn.addEventListener("click", () => {
-    let walletAmount = parseFloat(wallet.textContent);
+
+    // let walletAmount = parseFloat(wallet.innerText);
     let amount = Number(amountInput.value);
     let category = categorySelect.value;
     // let date = dateInput.value;
@@ -89,14 +91,16 @@ addBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 
     totalAmount += amount;
-    walletAmount -= amount;
+    
+    // walletAmount -= amount;
+    // wallet.innerText = walletAmount;
     
     newExpense(category, amount);
 
     totalSpent.textContent = new Intl.NumberFormat('pt-BR', 
         { style: 'currency', currency: 'BRL' }).format(totalAmount);
-    wallet.textContent = new Intl.NumberFormat('pt-BR', 
-    { style: 'currency', currency: 'BRL' }).format(walletAmount);
+    // wallet.innerText = new Intl.NumberFormat('pt-BR', { style: 'currency', 
+    //     currency: 'BRL' }).format(walletAmount);
 });
 
 let newExpense = (ctg, amt) => {

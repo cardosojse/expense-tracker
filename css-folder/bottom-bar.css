@@ -1,8 +1,7 @@
 .bottom-bar{
     position: fixed;
     bottom: 0;
-    width: 100%;
-    max-width: 450px;
+    width: clamp(375px, 100%, 450px);
     background-color: var(--clr-blue);
     display: flex;
     justify-content: space-around;
