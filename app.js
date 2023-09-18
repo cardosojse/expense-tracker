@@ -115,7 +115,7 @@ let newExpense = (img, ctg, amt) => {
 }
 
 let walletAmount = (num) => {
-    let walletAmount = parseFloat(wallet.innerText);
+    let walletAmount = Number(wallet.innerText);
     if (moneyInput.value === ''){
         walletAmount -= num;
     }
