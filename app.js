@@ -23,12 +23,6 @@ const moneySubmit = document.querySelector("#moneybox-submit");
 const optionImg = document.querySelector(".option-img");
 const transactionCategory = document.querySelector("#transaction-category");
 
-// Change default image of select element
-transactionCategory.addEventListener("click", ()=>{
-    let category = categorySelect.value;
-    optionImg.src = images[category];
-})
-
 // display sidebar
 toggleBtn.addEventListener("click", () => {
     if (sidebar.classList.contains("show-sidebar")){
@@ -40,6 +34,12 @@ toggleBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 });
+
+// Change default image of select element
+transactionCategory.addEventListener("click", ()=>{
+    let category = categorySelect.value;
+    optionImg.src = images[category];
+})
 
 // display moneybox
 walletIcon.addEventListener("click", () => {
@@ -135,7 +135,6 @@ let getData = () => {
     wallet.innerText = localStorage.getItem("wallet-data");
     expenseList.innerHTML = localStorage.getItem("expense-list");
     totalSpent.textContent = localStorage.getItem("total-spent");
-    // localStorage.removeItem("total-spent");
 }
 
 getData();
