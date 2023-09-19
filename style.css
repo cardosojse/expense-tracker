@@ -79,6 +79,7 @@ body{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
     width: clamp(375px, 100vw, 450px);
     min-height: 800px;
+    overflow: hidden;
 }
 ::-webkit-scrollbar{
     width: 0;
