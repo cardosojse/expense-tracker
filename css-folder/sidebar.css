@@ -6,11 +6,11 @@
     background-color: var(--clr-white);
     border-top-left-radius: 28px; border-top-right-radius: 28px;
     padding: 20px 0;
-    transform: translateY(200%);
+    transform: translateX(-150%);
     transition: 1.5s;
 }
 .show-sidebar{
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: 1.5s;
 }
 .sidebar-toggle{

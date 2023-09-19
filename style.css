@@ -72,14 +72,13 @@ html{
 body{
     height: 100%;
     position: fixed;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 .container{
-    position: relative;
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
     width: clamp(375px, 100vw, 450px);
-    height: 100%;
+    min-height: 800px;
 }
 ::-webkit-scrollbar{
     width: 0;
