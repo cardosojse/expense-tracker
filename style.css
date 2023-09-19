@@ -76,6 +76,7 @@ body{
     -webkit-overflow-scrolling: touch;
 }
 .container{
+    position: relative;
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
     width: clamp(375px, 100vw, 450px);
     height: 100vh;
