@@ -96,8 +96,7 @@ addBtn.addEventListener("click", () => {
     // }
     totalAmount += amount;
 
-    totalSpent.innerText = new Intl.NumberFormat('pt-BR', 
-        { style: 'currency', currency: 'BRL' }).format(totalAmount);
+    totalSpent.innerText += totalAmount;
 
     newExpense(images[category], category, amount);
     walletAmount(amount);
@@ -135,5 +134,4 @@ let getData = () => {
     expenseList.innerHTML = localStorage.getItem("expense-list");
     totalSpent.textContent = localStorage.getItem("total-spent");
 }
-
 getData();
