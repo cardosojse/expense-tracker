@@ -8,6 +8,7 @@
     padding: 20px 0;
     transform: translateX(-150%);
     transition: 1.5s;
+    overflow: auto;
 }
 .show-sidebar{
     transform: translateX(0%);
