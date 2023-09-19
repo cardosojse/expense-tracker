@@ -32,7 +32,7 @@
         background-size: contain;
         height: 100vh;
         width: 100vw;
-        overflow-y: auto;
+        overflow: hidden;
     }
     .container{
         position: relative;
@@ -72,14 +72,14 @@ html{
 body{
     height: 100%;
     position: fixed;
-    overflow-y: hidden;
+    /* overflow-y: scroll; */
     -webkit-overflow-scrolling: touch;
 }
 .container{
     position: relative;
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
     width: clamp(375px, 100vw, 450px);
-    height: 100vh;
+    height: 100%;
 }
 ::-webkit-scrollbar{
     width: 0;

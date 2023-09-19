@@ -93,8 +93,9 @@
     outline: none;
 }
 #submit-input{
+    margin-top: 60px;
     position: relative;
-    top: 7.5%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--clr-blue);
@@ -103,7 +104,6 @@
     border-radius: 4px;
     padding: 10px 20px;
     font-size: 16px;
-
 }
 #submit-input:hover{
     background-color: rgba(0, 25, 45, 0.8);
