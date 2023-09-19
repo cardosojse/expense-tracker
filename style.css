@@ -67,7 +67,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0rem;
-    overflow: hidden;
+    overflow: auto;
 }
 .container{
     position: relative;
