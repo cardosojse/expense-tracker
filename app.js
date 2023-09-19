@@ -129,7 +129,6 @@ let saveData = () => {
     localStorage.setItem("wallet-data", wallet.innerText);
     localStorage.setItem("expense-list", expenseList.innerHTML);
     localStorage.setItem("total-spent", totalSpent.innerText);
-
 }
 let getData = () => {
     wallet.innerText = localStorage.getItem("wallet-data");
