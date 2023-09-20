@@ -1,7 +1,7 @@
 .sidebar{
     position: fixed;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     top: calc(0% + 169px);
     background-color: var(--clr-white);
     border-top-left-radius: 28px; border-top-right-radius: 28px;
@@ -27,20 +27,20 @@
 }
 .close-btn{
     position: fixed;
-    top: 2%;
+    top: 4.5%;
     left: 5%;
     cursor: pointer;
-    animation: rotate 2s ease infinite;
     padding: 2px;
 }
 .close-btn:hover{
     background-color: var(--clr-gray-100);
     border-radius: 50%;
+    animation: rotate 1s ease;
 }
 .transaction-value-container{
     display: flex;
     align-items: center;
-    margin: 60px 40px 20px;
+    margin: 24px 40px 12px;
 }
 .transaction-value-container span{
     background-color: var(--clr-green);
@@ -94,15 +94,14 @@
     outline: none;
 }
 #submit-input{
-    margin-top: 60px;
     position: relative;
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--clr-blue);
     color: var(--clr-white);
     border: none;
     border-radius: 4px;
+    margin-top: 24px;
     padding: 10px 20px;
     font-size: 16px;
 }
@@ -110,6 +109,5 @@
     background-color: rgba(0, 25, 45, 0.8);
     cursor: pointer;
 }
-::-webkit-calendar-picker-indicator{
-    color: #00192d;
-}
+/* ::-webkit-calendar-picker-indicator{
+} */

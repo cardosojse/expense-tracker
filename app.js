@@ -96,7 +96,7 @@ addBtn.addEventListener("click", () => {
     // }
     totalAmount += amount;
 
-    totalSpent.innerText += totalAmount;
+    totalSpent.innerText = totalAmount;
 
     newExpense(images[category], category, amount);
     walletAmount(amount);

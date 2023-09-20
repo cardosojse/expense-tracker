@@ -1,6 +1,4 @@
 .main-container{
-    width: 100%;
-    height: 100%;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     background-color: var(--clr-white);

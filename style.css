@@ -26,7 +26,7 @@
     }
 }
 
-@media screen and (width >= 600px) {
+@media screen and (width >= 500px) {
     body{
         background: url(images/background.jpg);
         background-size: contain;
@@ -77,9 +77,10 @@ body{
 }
 .container{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
-    width: clamp(375px, 100vw, 450px);
-    min-height: 100dvh;
-    overflow: hidden;
+    width: clamp(375px, 100vw, 490px);
+    height: 100dvh;
+    max-height: 740px;
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar{
     width: 0;
