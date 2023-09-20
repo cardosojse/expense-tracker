@@ -96,7 +96,9 @@ addBtn.addEventListener("click", () => {
     // }
     totalAmount += amount;
 
-    totalSpent.innerText = totalAmount;
+    // FIX
+    totalSpent.innerText = new Intl.NumberFormat('pt-BR', 
+        { style: 'currency', currency: 'BRL' }).format(totalAmount);;
 
     newExpense(images[category], category, amount);
     walletAmount(amount);
