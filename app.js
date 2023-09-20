@@ -75,7 +75,6 @@ const dateInput = document.querySelector("#transaction-date");
 const noteInput = document.querySelector("#transaction-notes");
 const addBtn = document.querySelector("#submit-input");
 const expenseList = document.querySelector(".expense-list");
-const expenseDate = document.querySelector(".content");
 const totalSpent = document.querySelector(".total-spent");
 const currentDate = document.querySelector(".current-date");
 
@@ -83,7 +82,7 @@ const currentDate = document.querySelector(".current-date");
 addBtn.addEventListener("click", () => {
     let amount = Number(amountInput.value);
     let category = categorySelect.value;
-    let date = dateInput.value;
+    // let date = dateInput.value;
     let totalValue = Number(totalSpent.innerText);
 
     // let notes = noteInput.value;
@@ -100,8 +99,8 @@ addBtn.addEventListener("click", () => {
     //     return;
     // }
     totalAmount += amount;
-    totalValue += totalAmount;
-    totalSpent.innerText = totalValue;
+    totalAmount += totalValue;
+    totalSpent.innerText = totalAmount;
 
     // newDiv(date, totalAmount);
     newExpense(images[category], category, amount);

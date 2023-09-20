@@ -20,19 +20,15 @@
     width: 100%;
     text-align: center;
 }
-.date-container span:first-child{
+.today{
     background-color: var(--clr-blue);
     color: var(--clr-gray-100);
 }
-.date-container span:nth-child(2){
+.month{
     background-color: var(--clr-gray-100);
     color: var(--clr-blue);
 }
-/* MAIN CONTENT */
-.content{
-    padding: 30px 0;
-}
-.content > div{
+.expense-info{
     display: flex;
     justify-content: space-between;
     margin: 0px 0 20px 0;
@@ -44,6 +40,9 @@
 }
 .total-spent{
     color: var(--clr-orange);
+}
+.content{
+    padding: 30px 0;
 }
 .expense-list{
     list-style: none;
