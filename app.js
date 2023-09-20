@@ -34,13 +34,11 @@ toggleBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 });
-
-// Change default image of select element
+// Change default image of select element 
 transactionCategory.addEventListener("click", ()=>{
-    let category = categorySelect.value;
+    let category = categorySelect.value; // FIX THIS 4 MOBILE
     optionImg.src = images[category];
-})
-
+});
 // display moneybox
 walletIcon.addEventListener("click", () => {
     if (moneybox.classList.contains("show-money-bar")){
@@ -52,7 +50,6 @@ walletIcon.addEventListener("click", () => {
 closeMoneybox.addEventListener("click", () => {
     moneybox.classList.remove("show-money-bar");
 });
-
 // add money to wallet
 moneySubmit.addEventListener("click", () => {
     let transactionValue = Number(moneyInput.value);
