@@ -75,17 +75,19 @@ const dateInput = document.querySelector("#transaction-date");
 const noteInput = document.querySelector("#transaction-notes");
 const addBtn = document.querySelector("#submit-input");
 const expenseList = document.querySelector(".expense-list");
+const content = document.querySelector(".content");
 const totalSpent = document.querySelector(".total-spent");
 const currentDate = document.querySelector(".current-date");
+const today = document.querySelector(".today");
+const month = document.querySelector(".month");
 
 // add transaction
 addBtn.addEventListener("click", () => {
     let amount = Number(amountInput.value);
     let category = categorySelect.value;
     // let date = dateInput.value;
-    let totalValue = Number(totalSpent.innerText);
-
     // let notes = noteInput.value;
+    
     if (category === ''){
         alert('Select a category!');
         return;
@@ -98,11 +100,10 @@ addBtn.addEventListener("click", () => {
     //     alert('Select a date!');
     //     return;
     // }
+    
     totalAmount += amount;
-    totalAmount += totalValue;
     totalSpent.innerText = totalAmount;
 
-    // newDiv(date, totalAmount);
     newExpense(images[category], category, amount);
     walletAmount(amount);
     amountInput.value = '';
@@ -110,10 +111,16 @@ addBtn.addEventListener("click", () => {
     saveData();
 });
 
+// today.addEventListener("click", () =>{
+// });
+
 // let newDiv = (date, total) => {
-//     newDiv.innerHTML = `<span class="current-date">${date}</span>
-//                         <span class="total-spent">${total}</span>`;
-//     expenseDate.appendChild(newDiv);
+//     let newDiv = document.createElement("div");
+//     newDiv.innerHTML = `<div class="expense-info">
+//                             <span class="current-date">${date}</span>
+//                             <span class="total-spent">${total}</span>
+//                         </div>`;
+//     content.appendChild(newDiv);
 // }
 
 let newExpense = (img, ctg, amt) => { 
