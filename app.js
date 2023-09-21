@@ -75,19 +75,43 @@ const dateInput = document.querySelector("#transaction-date");
 const noteInput = document.querySelector("#transaction-notes");
 const addBtn = document.querySelector("#submit-input");
 const expenseList = document.querySelector(".expense-list");
-const content = document.querySelector(".content");
 const totalSpent = document.querySelector(".total-spent");
 const currentDate = document.querySelector(".current-date");
 const today = document.querySelector(".today");
 const month = document.querySelector(".month");
 
+window.addEventListener("DOMContentLoaded", () => {
+    today.classList.add("active");
+    let todayDate = new Date();
+    currentDate.innerText = new Intl.DateTimeFormat("pt-BR", {
+        day:'2-digit', month:'2-digit'
+    }).format(todayDate);
+})
+
+today.addEventListener("click", () => {
+    month.classList.remove("active");
+    today.classList.add("active");
+});
+
+month.addEventListener("click", () => {
+    today.classList.remove("active");
+    month.classList.add("active");
+});
+
+// let checkDate = (date) => {
+//     let d = new Date();
+//     date = new Intl.DateTimeFormat("pt-BR", {day:'2-digit', month:'2-digit'}).format(d);
+//     if (date != dateInput.value)
+// }
+
 // add transaction
 addBtn.addEventListener("click", () => {
     let amount = Number(amountInput.value);
     let category = categorySelect.value;
-    // let date = dateInput.value;
-    // let notes = noteInput.value;
-    
+    let totalValue = Number(totalSpent.innerText);
+
+    let date = dateInput.value;
+
     if (category === ''){
         alert('Select a category!');
         return;
@@ -100,10 +124,14 @@ addBtn.addEventListener("click", () => {
     //     alert('Select a date!');
     //     return;
     // }
-    
     totalAmount += amount;
+    totalAmount += totalValue;
     totalSpent.innerText = totalAmount;
 
+    console.log(date)
+    // currentDate.innerText = new Intl.DateTimeFormat("pt-BR", 
+    //     {day:'2-digit', month:'2-digit'}).format();
+    
     newExpense(images[category], category, amount);
     walletAmount(amount);
     amountInput.value = '';
@@ -111,17 +139,7 @@ addBtn.addEventListener("click", () => {
     saveData();
 });
 
-// today.addEventListener("click", () =>{
-// });
 
-// let newDiv = (date, total) => {
-//     let newDiv = document.createElement("div");
-//     newDiv.innerHTML = `<div class="expense-info">
-//                             <span class="current-date">${date}</span>
-//                             <span class="total-spent">${total}</span>
-//                         </div>`;
-//     content.appendChild(newDiv);
-// }
 
 let newExpense = (img, ctg, amt) => { 
     let li = document.createElement("li");
@@ -145,13 +163,13 @@ let walletAmount = (num) => {
 let saveData = () => {
     localStorage.setItem("wallet-data", wallet.innerText);
     localStorage.setItem("expense-list", expenseList.innerHTML);
-    localStorage.setItem("total-spent", totalSpent.innerText);
+    localStorage.setItem("total-amount", totalSpent.innerText)
 }
 let getData = () => {
     wallet.innerText = localStorage.getItem("wallet-data");
     expenseList.innerHTML = localStorage.getItem("expense-list");
-    totalSpent.textContent = localStorage.getItem("total-spent");
+    totalSpent.innerText = localStorage.getItem("total-amount");
 }
+// localStorage.removeItem("total-amount");
 // localStorage.removeItem("expense-list");
-// localStorage.removeItem("total-spent");
 getData();
