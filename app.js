@@ -31,7 +31,6 @@ toggleBtn.addEventListener("click", () => {
         sidebar.classList.add("show-sidebar");
     }
 });
-
 closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 });
@@ -41,7 +40,6 @@ transactionCategory.addEventListener("click", ()=>{
     let category = categorySelect.value;
     optionImg.src = images[category];
 });
-
 transactionCategory.addEventListener("touchstart", () => {
     let category = categorySelect.value;
     optionImg.src = images[category];
@@ -55,7 +53,6 @@ walletIcon.addEventListener("click", () => {
         moneybox.classList.add("show-money-bar")
     }
 });
-
 closeMoneybox.addEventListener("click", () => {
     moneybox.classList.remove("show-money-bar");
 });
@@ -73,7 +70,6 @@ moneySubmit.addEventListener("click", () => {
     saveData();
 });
 
-let totalAmount = 0;
 const amountInput = document.querySelector("#transaction-value");
 const categorySelect = document.querySelector("#transaction-category");
 const dateInput = document.querySelector("#transaction-date");
@@ -84,6 +80,7 @@ const totalSpent = document.querySelector(".total-spent");
 const currentDate = document.querySelector(".current-date");
 const today = document.querySelector(".today");
 const month = document.querySelector(".month");
+const moneySpent = document.querySelector(".money-spent");
 
 window.addEventListener("DOMContentLoaded", () => {
     today.classList.add("active");
@@ -113,9 +110,7 @@ month.addEventListener("click", () => {
 addBtn.addEventListener("click", () => {
     let amount = Number(amountInput.value);
     let category = categorySelect.value;
-    let totalValue = Number(totalSpent.innerText);
-
-    let date = dateInput.value;
+    // let date = dateInput.value;
 
     if (category === ''){
         alert('Select a category!');
@@ -129,41 +124,56 @@ addBtn.addEventListener("click", () => {
     //     alert('Select a date!');
     //     return;
     // }
-    totalAmount += amount;
-    totalAmount += totalValue;
-    totalSpent.innerText = totalAmount;
-
-    console.log(date)
     // currentDate.innerText = new Intl.DateTimeFormat("pt-BR", 
     //     {day:'2-digit', month:'2-digit'}).format();
-    
     newExpense(images[category], category, amount);
+    totalAmount(amount);
     walletAmount(amount);
     amountInput.value = '';
     sidebar.classList.remove("show-sidebar");
     saveData();
 });
 
-
-
 let newExpense = (img, ctg, amt) => { 
     let li = document.createElement("li");
     li.innerHTML += `<img src="${img}">
-                    <span class="spent-on">${ctg}</span>
-                    <span class="money-spent">${amt}</span>`;
+                    <p class="spent-on">${ctg}</p>
+                    <p class="money-spent">${amt}</p>`;
     expenseList.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = '\u00d7';
+    li.appendChild(span);
 }
 
-let walletAmount = (num) => {
+let totalAmount = (amount) =>{
+    let totalValue = 0;
+    currentSpent = Number(totalSpent.innerText);
+    totalValue = amount + currentSpent;
+    totalSpent.innerText = Math.round(totalValue); 
+}
+
+let walletAmount = (amount) => {
     let walletAmount = Number(wallet.innerText);
     if (moneyInput.value === ''){
-        walletAmount -= num;
+        walletAmount -= amount;
     }
     else if(amountInput.value === ''){
-        walletAmount += num;
+        walletAmount += amount;
     }
     wallet.innerText = Math.round(walletAmount);
 }
+
+// let removeExpense = () => {
+//     let expense = moneySpent.innerText;
+//     totalSpent.innerText -= expense;
+// }
+
+expenseList.addEventListener("click", (userClick) => {
+    if (userClick.target.tagName === "SPAN")
+        userClick.target.parentElement.remove();
+        // removeExpense();
+        saveData();
+});
 
 let saveData = () => {
     localStorage.setItem("wallet-data", wallet.innerText);
@@ -175,6 +185,7 @@ let getData = () => {
     expenseList.innerHTML = localStorage.getItem("expense-list");
     totalSpent.innerText = localStorage.getItem("total-amount");
 }
+// localStorage.removeItem("wallet-data");
 // localStorage.removeItem("total-amount");
 // localStorage.removeItem("expense-list");
 getData();

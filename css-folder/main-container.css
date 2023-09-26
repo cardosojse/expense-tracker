@@ -48,12 +48,15 @@
 }
 .expense-list li{
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
     align-items: center;
     padding: 8px;
     margin: 6px 0 0;
     font-size: 18px;
     color: var(--clr-blue);
+}
+.expense-list li span{
+    justify-self: flex-end;
 }
 .money-spent{
     color: var(--clr-orange);
