@@ -30,8 +30,8 @@
     body{
         background: url(images/background.jpg);
         background-size: auto;
-        height: 100vh;
-        width: 100vw;
+        height: 100dvh;
+        width: 100dvw;
         overflow: hidden;
     }
     .container{
@@ -87,7 +87,7 @@ body{
 }
 .container{
     background: linear-gradient(to bottom, #21ce99 50%, #fff 50%);
-    width: clamp(300px, 100vw, 450px);
+    width: clamp(300px, 100dvw, 450px);
     height: 100dvh;
     max-height: 740px;
     overflow-x: hidden;
