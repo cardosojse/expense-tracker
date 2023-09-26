@@ -38,9 +38,14 @@ closeBtn.addEventListener("click", () => {
 
 // Change default image of select element 
 transactionCategory.addEventListener("click", ()=>{
-    let category = categorySelect.value; // FIX THIS 4 MOBILE
+    let category = categorySelect.value;
     optionImg.src = images[category];
 });
+
+transactionCategory.addEventListener("touchstart", () => {
+    let category = categorySelect.value;
+    optionImg.src = images[category];
+})
 
 // display moneybox
 walletIcon.addEventListener("click", () => {
