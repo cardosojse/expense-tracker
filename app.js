@@ -36,14 +36,11 @@ closeBtn.addEventListener("click", () => {
 });
 
 // Change default image of select element 
-transactionCategory.addEventListener("click", ()=>{
-    let category = categorySelect.value;
-    optionImg.src = images[category];
+transactionCategory.addEventListener("change", (e)=>{
+    let target = e.target;
+    let valueTarget = target.value;
+    optionImg.src = images[valueTarget];
 });
-transactionCategory.addEventListener("touchstart", () => {
-    let category = categorySelect.value;
-    optionImg.src = images[category];
-})
 
 // display moneybox
 walletIcon.addEventListener("click", () => {
@@ -99,12 +96,6 @@ month.addEventListener("click", () => {
     today.classList.remove("active");
     month.classList.add("active");
 });
-
-// let checkDate = (date) => {
-//     let d = new Date();
-//     date = new Intl.DateTimeFormat("pt-BR", {day:'2-digit', month:'2-digit'}).format(d);
-//     if (date != dateInput.value)
-// }
 
 // add transaction
 addBtn.addEventListener("click", () => {
@@ -163,15 +154,9 @@ let walletAmount = (amount) => {
     wallet.innerText = Math.round(walletAmount);
 }
 
-// let removeExpense = () => {
-//     let expense = moneySpent.innerText;
-//     totalSpent.innerText -= expense;
-// }
-
 expenseList.addEventListener("click", (userClick) => {
     if (userClick.target.tagName === "SPAN")
         userClick.target.parentElement.remove();
-        // removeExpense();
         saveData();
 });
 
